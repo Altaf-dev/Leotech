@@ -1,0 +1,414 @@
+@import "header";
+@import "main";
+@import "footer";
+@import "color.scss";
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+
+  &:after,
+  &:before {
+    transition: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html.active {
+  overflow-y: hidden;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden;
+  color: $text-color;
+  background-color: grey;
+  height: 5000px;
+}
+
+:root {
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+input,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  background: $btn-bg;
+  border: 2px solid $hover-color;
+  box-shadow: 0 10px 40px rgba(242, 34, 72, 0.2);
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: $hover-color;
+  transition: .3s;
+
+  &:hover {
+    color: $btn-bg;
+    background-color: $hover-color;
+  }
+}
+
+.btn-angle {
+  border: 3px solid transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s all;
+  position: relative;
+
+  .btn-name {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    transition: .3s all;
+  }
+
+  .note {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    opacity: .4;
+  }
+
+  .top-border {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid $text-color;
+      position: absolute;
+      top: -3px;
+      transition: .3s;
+    }
+
+    &:before {
+      left: -3px;
+      border-top-left-radius: 20px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &:after {
+      right: -3px;
+      border-top-right-radius: 20px;
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+
+  .bottom-border {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid $text-color;
+      position: absolute;
+      bottom: -3px;
+      transition: .3s;
+    }
+
+    &:before {
+      left: -3px;
+      border-bottom-left-radius: 20px;
+      border-top: none;
+      border-right: none;
+    }
+
+    &:after {
+      right: -3px;
+      border-bottom-right-radius: 20px;
+      border-top: none;
+      border-left: none;
+    }
+  }
+
+  &:hover {
+    border: 3px solid transparent;
+
+    .btn-name {
+      color: $hover-color;
+    }
+
+    .top-border {
+      &:after,
+      &:before {
+        border: 3px solid $hover-color;
+      }
+
+      &:before {
+        border-right: none;
+        border-bottom: none;
+      }
+
+      &:after {
+        border-left: none;
+        border-bottom: none;
+      }
+    }
+
+    .bottom-border {
+      &:after,
+      &:before {
+        border: 3px solid $hover-color;
+      }
+
+      &:before {
+        border-top: none;
+        border-right: none;
+      }
+
+      &:after {
+        border-top: none;
+        border-left: none;
+      }
+    }
+  }
+}
+
+.slick-slide,
+.slide {
+  outline: none;
+}
+
+
+.slick-prev,
+.slick-next {
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: .3s;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    box-shadow: 0 8px 30px rgba(255, 208, 60, 0.5);
+    z-index: 1000;
+    opacity: 1;
+    background-image: url("../img/standard.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 0px 8px 30px rgba(255, 150, 37, 0.5);
+  }
+
+}
+
+.slick-prev {
+  left: -100px;
+
+  &:before {
+    transform: rotateZ(180deg);
+  }
+}
+
+.slick-next {
+  right: -100px;
+}
+
+.btn-upload {
+  .input__file {
+    display: none;
+  }
+
+
+  &:hover {
+    color: $hover-color;
+
+    .input__file-text {
+      span {
+        .icon {
+          fill: $hover-color;
+        }
+      }
+    }
+  }
+
+  .top-border {
+    &:after,
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
+
+    &:before {
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &:after {
+      border-left: none;
+      border-bottom: none;
+    }
+  }
+
+  .bottom-border {
+    &:after,
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
+
+    &:before {
+      border-top: none;
+      border-right: none;
+    }
+
+    &:after {
+      border-top: none;
+      border-left: none;
+    }
+  }
+
+  .input__file-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    height: 50px;
+    position: relative;
+    padding-left: 40px;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translate(0, -50%);
+
+      .icon {
+        transition: .3s;
+        fill: $text-color;
+      }
+    }
+  }
+}
+
+.modal-callback {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.input.invalid {
+  border-bottom: 2px solid $hover-color;
+}
+
+.product-link {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.review {
+  .feedback-slider {
+    &__item {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 50px;
+    }
+
+    .slide {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+}

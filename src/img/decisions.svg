@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="171px" viewBox="0 0 150 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons / features / decisions</title>
+    <defs>
+        <path d="M55.789836,60.2568314 L31.1732917,48.6732917 L31.1732917,121.755561 L55.789836,133.3391 L55.789836,60.2568314 Z M61.8800251,133.253838 L86.1128874,122.334129 L86.1128874,49.2518597 L61.8800251,60.1715687 L61.8800251,133.253838 Z M92.2030765,122.462023 L116.435939,133.935939 L116.435939,60.8536699 L92.2030765,49.3797537 L92.2030765,122.462023 Z" id="path-1"></path>
+        <filter x="-39.3%" y="-34.6%" width="199.7%" height="199.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="9" dy="13" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.718834918   0 0 0 0 0.524752632   0 0 0 0 0  0 0 0 0.36 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M53.789836,58.2568314 L29.1732917,46.6732917 L29.1732917,119.755561 L53.789836,131.3391 L53.789836,58.2568314 Z M59.8800251,131.253838 L84.1128874,120.334129 L84.1128874,47.2518597 L59.8800251,58.1715687 L59.8800251,131.253838 Z M90.2030765,120.462023 L114.435939,131.935939 L114.435939,58.8536699 L90.2030765,47.3797537 L90.2030765,120.462023 Z" id="path-3"></path>
+        <filter x="-6.5%" y="-7.6%" width="122.3%" height="122.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="4" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.718834918   0 0 0 0 0.524752632   0 0 0 0 0  0 0 0 0.411822552 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Главная-v8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Previews-/-Main-/-Main-(Laptop)" transform="translate(-460.000000, -1180.000000)">
+            <g id="Второй-экран-(преимущества)" transform="translate(50.000000, 997.000000)">
+                <g id="icons-/-features-/-decisions" transform="translate(410.000000, 183.000000)">
+                    <ellipse id="Oval" fill="#F0F0F0" cx="60.251046" cy="60" rx="60.251046" ry="60"></ellipse>
+                    <g id="Shape" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFBA61" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M54.789836,59.2568314 L30.1732917,47.6732917 L30.1732917,120.755561 L54.789836,132.3391 L54.789836,59.2568314 Z M60.8800251,132.253838 L85.1128874,121.334129 L85.1128874,48.2518597 L60.8800251,59.1715687 L60.8800251,132.253838 Z M91.2030765,121.462023 L115.435939,132.935939 L115.435939,59.8536699 L91.2030765,48.3797537 L91.2030765,121.462023 Z" id="Shape-Copy-6" fill="#FFBA61" fill-rule="nonzero"></path>
+                    <g id="Shape-Copy-5" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#FFD03D" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
