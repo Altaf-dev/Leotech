@@ -1,6 +1,6 @@
-const MUNU_BTN = document.querySelector('.header__nav-menu')
+const MUNU_BTN = document.querySelector('.header__nav-btn')
 const BTN = document.querySelector('.line')
-
+const MENU_OPEN = document.querySelector('.header__menu')
 const CONTACTS_OPEN_BTN = document.querySelector('.close-btn')
 const CONTACTS_OPEN = document.querySelector('.header__contacts')
 
@@ -10,6 +10,7 @@ CONTACTS_OPEN_BTN.onclick = () => {
 
 MUNU_BTN.onclick = () => {
     BTN.classList.toggle('btn-open')
+    MENU_OPEN.classList.toggle('menu-open')
 }
 
 
